@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
  * 
  */
 public class BirdSing {
-	    /**
+	                            /**
      * 告诉你一个秘密
      * 
      * @param fromUsername
@@ -31,7 +31,7 @@ public class BirdSing {
 
 		String picUrl = getRandomMM(fromUsername);
 
-        ret = String.format(textPicTemplate, fromUsername, toUsername, time, "好吧，告诉你一个秘密", "这个秘密告诉你", picUrl, picUrl);
+        ret = String.format(textPicTemplate, fromUsername, toUsername, time, "好吧，偷偷给你看一个秘密~", "不要告诉别人哟～", picUrl, picUrl);
 		return ret;
 	}
 
@@ -128,7 +128,7 @@ public class BirdSing {
 		String ret = "";
 		String textTemplate = "<xml><ToUserName><![CDATA[%1$s]]></ToUserName><FromUserName><![CDATA[%2$s]]></FromUserName><CreateTime>%3$s</CreateTime><MsgType><![CDATA[%4$s]]></MsgType><Content><![CDATA[%5$s]]></Content><FuncFlag>0</FuncFlag></xml>";
 		String msgType = "text";
-        String contentStr = "欢迎来到交换秘密，你发送一个秘密给我，我也告诉你一个秘密，fair enough ~\n 特别提醒:秘密只能是图片、声音或者文字~\n";
+        String contentStr = "欢迎来到交换秘密，你发送一个秘密给我，我也告诉你一个秘密，fair enough ~\n 特别提醒:秘密只能是图片~\n";
 		ret = String.format(textTemplate, fromUsername, toUsername, time, msgType, contentStr);
 		return ret;
 	}

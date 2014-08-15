@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.miracle.service.SecretService;
+
 public class Validate extends HttpServlet {
 
     private static Logger log = LoggerFactory.getLogger(Validate.class);
@@ -25,12 +27,10 @@ public class Validate extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         log.info(request.getCharacterEncoding() + " : " + response.getCharacterEncoding());
-        //
         // response.setCharacterEncoding("UTF-8");
         request.setCharacterEncoding("UTF-8");
 
-        String ret = "服务器到期，暂停服务；重新上线会通知您，敬请期待～";
-        // SecretService.reply(request);
+        String ret = SecretService.reply(request);
         out.print(ret);
         log.info(ret);
         out.flush();

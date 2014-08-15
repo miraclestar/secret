@@ -7,13 +7,13 @@
   <servlet>
   	<servlet-name>Validate</servlet-name>
   	<display-name>Validate</display-name>
-  	<load-on-startup>1</load-on-startup>
+  
   	<servlet-class>com.miracle.servlet.Validate</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>Init</servlet-name>
   	<display-name>Init</display-name>
-  	<description></description>
+  	<load-on-startup>1</load-on-startup>
   	<servlet-class>com.miracle.base.Init</servlet-class>
   </servlet>
   <servlet-mapping>
